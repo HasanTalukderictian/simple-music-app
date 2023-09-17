@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MUsic Website -Busy Coder</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="navbar">
+			<img src="file/logo.png" class="logo"
+			>
+			<ul>
+				<li>
+					<a href="#"> Home</a>
+					<a href="#" >About</a>
+					<a href="#"> Specifications</a>
+					<a href="#" >Products</a>
+					<a href="#" >Connect</a>
+				</li>
+
+			</ul>
+		</div>
+		<div class="content">
+			<div class="left-col">
+				<h1>The<br> Real<br> Sound</h1>
+			</div>
+			<div class="right-col">
+				<p> Click Here to Play Music </p>
+				<img src="file/play.png" id ="icon">
+			</div>
+		</div>
+		
+	</div>
+	<audio id="mySong">
+		<source src="file/song.mp3" type="audio/mp3">
+	</audio>
+	<script >
+		var mySong = document.getElementById("mySong");
+		var icon = document.getElementById("icon");
+
+		icon.onclick= function(){
+			if (mySong.paused) {
+				mySong.play();
+				icon.src ="file/pause.png";
+			}else{
+				mySong.pause();
+				icon.src ="file/play.png";
+			}
+		}
+	</script>
+
+</body>
+</html>
